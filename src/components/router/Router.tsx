@@ -1,5 +1,4 @@
-import { Dialog } from '@headlessui/react';
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import { Outlet, RouteObject, useRoutes, BrowserRouter } from 'react-router-dom';
 
 const Loading = () => <p className="p-4 w-full h-full text-center">Loading...</p>;
@@ -10,8 +9,8 @@ const Page404Screen = lazy(() => import('~/components/screens/404'));
 function Layout() {
   return (
     <div>
-      <nav className="p-4 flex items-center justify-between">
-        <span>Header</span>
+      <nav className="p-4 flex text-white items-center justify-between bg-slate-800">
+        <p className="text-3xl"><span className="text-blue-500">Surf</span> Journal</p>
       </nav>
       <Outlet />
     </div>
